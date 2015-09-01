@@ -1,5 +1,4 @@
-from prelude import mapc
-from fp import pipe, com
+from fp import pipe, com, show
 
 # FONADIC
 # BUG: fails with pipe of length one
@@ -25,7 +24,7 @@ class Beg:
             return Beg(self.cmds + [cmd])
 
     def __repr__(self, ):
-        return mapc(str, self.cmds, ' | ')
+        return show(self.cmds)
 
 
 class End:

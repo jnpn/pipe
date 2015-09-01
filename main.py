@@ -23,8 +23,7 @@ will be equivalent to:
 import click
 import json
 
-from prelude import mapc
-from fp import pipe, com
+from fp import pipe, com, show
 from oop import Beg, End
 
 from config import PIPES
@@ -37,9 +36,9 @@ def fp(p):
     f: the shell representation of the pipe 'a | ... | z'
     r: the value returned by the OS.
     '''
-    f = mapc(str, p, ' | ')
+    f = show(p)
     r = com(pipe(p))
-    return f, r.decode('utf8')
+    return f, r
 
 
 def oo(p):
