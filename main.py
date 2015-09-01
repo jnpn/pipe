@@ -62,7 +62,7 @@ def do(kind, cmd):
     pipes = cmds if cmds else PIPES.values()
     for p in pipes:
         f, r = machinery(p)
-        print(f, '->', r)
+        print(f, '->', r.decode('utf8'))
 
 if __name__ == '__main__':
     # $ diff -y <(python pipes.py --kind oo) <(python pipes.py --kind fp)
