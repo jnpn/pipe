@@ -31,3 +31,10 @@ class Beg:
 class End:
     def _(self, cmds):
         return com(pipe(cmds))
+
+
+# Tests
+
+
+def t0():
+    return Beg() | ["ls", "/tmp"] | ["wc"] | End()
