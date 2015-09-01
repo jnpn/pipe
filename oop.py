@@ -7,25 +7,22 @@ from fp import pipe, com
 
 class Beg:
 
-    def __init__(self, ):
-        self.cmds = []
-
-    def __neg__(self, ):
-        self.cmds = []
-        return self
+    def __init__(self, cmds=[]):
+        self.cmds = cmds[:]
 
     def __or__(self, cmd):
         '''
-        Beg(...) | [cmd, args...] | ... .
-        aka `builder pattern`.
+        Beg(cmds) | [cmd, args...]
+              |
+              `- Beg(cmds + [cmd]) | ... .
+
+        Cons like list construction with
+        context and termination.
         '''
-        # if cmd is None or cmd is self:
-        #     return com(pipe(self.cmds))
         if type(cmd) is End:
             return cmd._(self.cmds)
         else:
-            self.cmds.append(cmd)
-            return self
+            return Beg(self.cmds + [cmd])
 
     def __repr__(self, ):
         return mapc(str, self.cmds, ' | ')
