@@ -1,5 +1,6 @@
 from fp import pipe, com, show
 
+
 # FONADIC
 # BUG: fails with pipe of length one
 

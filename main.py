@@ -64,6 +64,13 @@ def do(kind, cmd):
         f, r = machinery(p)
         print(f, '->', r.decode('utf8'))
 
+# Meta Example:
+# python main.py
+#  --cmd '[
+#          ["python", "main.py", "--cmd", "[[\"ls\"]]"],
+#          ["sed", "s,->, -->, g"]
+#         ]'
+
 if __name__ == '__main__':
     # $ diff -y <(python pipes.py --kind oo) <(python pipes.py --kind fp)
     do()
