@@ -15,6 +15,10 @@ class Beg:
         return self
 
     def __or__(self, cmd):
+        '''
+        Beg(...) | [cmd, args...] | ... .
+        aka `builder pattern`.
+        '''
         # if cmd is None or cmd is self:
         #     return com(pipe(self.cmds))
         if type(cmd) is End:
