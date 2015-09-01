@@ -1,0 +1,4 @@
+[
+    ['echo', 'foo bar baz'],
+    ['sed', 's, , @@@, g']
+]

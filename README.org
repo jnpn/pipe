@@ -1,0 +1,10 @@
+* MISSING
+** Per command stats
+** Error report
+   monadic/railway
+** Tests
+
+* Design ideas
+  https://gist.github.com/domenic/3889970
+
+  Popen -> Promises .then(done, error, progress|stats)
