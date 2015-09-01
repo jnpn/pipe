@@ -46,11 +46,10 @@ def oo(p):
     '''OOP wrapper based code.'''
     beg = Beg()
     end = End()
-    -beg
     for cmd in p:
         beg | cmd
     r = beg | end
-    return beg, r.decode('utf8')
+    return beg, r
 
 
 @click.command()
