@@ -1,5 +1,6 @@
 from subprocess import PIPE, Popen
 from functools import reduce
+from prelude import mapc
 
 # [Pi]
 # [Pi, Pj(Pi)]
@@ -30,3 +31,7 @@ def pipe(ps):
 def com(pipes):
     pipes[0].stdout.close()
     return pipes[-1].communicate()[0]
+
+
+def show(pipe):
+    return mapc(str, map(lambda cmd: ' '.join(cmd), pipe), ' | ')
