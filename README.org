@@ -8,3 +8,17 @@
   https://gist.github.com/domenic/3889970
 
   Popen -> Promises .then(done, error, progress|stats)
+
+* Ideas
+
+  Naming scheme and patterns for pipe elements.
+  To use that pipe non locally. Multiple branches, DAG.
+
+** indexed
+   [pipe:first|1] | [pipe 2] | .... | [pipe:last]
+
+** relation
+   (before <pipe>)
+   (after <pipe>)
+   (between <pipe>)
+   (icmd <cmd> <index>)
