@@ -1,4 +1,4 @@
-from fp import pipe, com, show
+from .fp import pipe, com, show
 
 
 # FONADIC

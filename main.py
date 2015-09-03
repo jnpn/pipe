@@ -23,8 +23,8 @@ will be equivalent to:
 import click
 import json
 
-from fp import pipe, com, show
-from oop import Beg, End
+from pipe.fp import pipe, com, show
+from pipe.oop import Beg, End
 
 from config import PIPES
 

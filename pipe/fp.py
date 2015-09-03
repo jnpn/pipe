@@ -1,6 +1,6 @@
 from subprocess import PIPE, Popen
 from functools import reduce
-from prelude import mapc
+from .prelude import mapc
 
 # [Pi]
 # [Pi, Pj(Pi)]
